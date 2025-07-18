@@ -17,7 +17,6 @@ class Presence extends Model
         'modifie_par',
     ];
 
-  
     public function etudiant()
     {
         return $this->belongsTo(Etudiant::class);

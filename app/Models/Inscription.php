@@ -9,14 +9,16 @@ class Inscription extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['etudiant_id', 'classe_annee_id'];
+    protected $fillable = [
+        'etudiant_id',
+        'classe_annee_id',
+        'date_inscription',
+    ];
 
- 
     public function etudiant()
     {
         return $this->belongsTo(Etudiant::class);
     }
-
 
     public function classeAnnee()
     {

@@ -7,18 +7,17 @@ return new class extends Migration
 {
     public function up(): void
     {
-        Schema::create('trimestres', function (Blueprint $table) {
+        Schema::create('classe_annees', function (Blueprint $table) {
             $table->id();
-            $table->string('nom');
-            $table->date('date_debut');
-            $table->date('date_fin');
+            $table->foreignId('classe_id')->constrained('classes')->onDelete('cascade');
             $table->foreignId('annee_academique_id')->constrained('annees_academiques')->onDelete('cascade');
+            $table->foreignId('coordinateur_id')->constrained('coordinateurs')->onDelete('cascade');
             $table->timestamps();
         });
     }
 
     public function down(): void
     {
-        Schema::dropIfExists('trimestres');
+        Schema::dropIfExists('classe_annees');
     }
 };

@@ -11,6 +11,8 @@ class Classe extends Model
 
     protected $fillable = ['nom'];
 
+    // 🔗 Relations
+
     public function classesAnnees()
     {
         return $this->hasMany(ClasseAnnee::class);

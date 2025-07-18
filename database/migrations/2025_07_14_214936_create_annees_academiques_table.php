@@ -8,14 +8,13 @@ return new class extends Migration
 {
     public function up(): void
     {
-Schema::create('annees_academiques', function (Blueprint $table) {
-    $table->id();
-    $table->string('annee');
-    $table->date('date_debut');
-    $table->date('date_fin');
-    $table->timestamps();
-});
-
+        Schema::create('annees_academiques', function (Blueprint $table) {
+            $table->id();
+            $table->string('annee');
+            $table->date('date_debut');
+            $table->date('date_fin');
+            $table->timestamps();
+        });
     }
 
     public function down(): void

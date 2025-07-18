@@ -19,25 +19,21 @@ class EmploiTemps extends Model
         'heure_fin',
     ];
 
-
     public function classeAnnee()
     {
         return $this->belongsTo(ClasseAnnee::class);
     }
 
-  
     public function matiere()
     {
         return $this->belongsTo(Matiere::class);
     }
-
 
     public function professeur()
     {
         return $this->belongsTo(Professeur::class);
     }
 
- 
     public function typeCours()
     {
         return $this->belongsTo(TypeCours::class);

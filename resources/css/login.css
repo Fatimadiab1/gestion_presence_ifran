@@ -1,0 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&family=Reddit+Sans&display=swap');
+
+body {
+    font-family: 'Reddit Sans', sans-serif;
+    background-color: white;
+    color: #181C38;
+}
+
+.dark body {
+    background-color: #181C38;
+    color: white;
+}
+
+.title-ifran {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+}
+
+input::placeholder {
+    color: #A0AEC0;
+}

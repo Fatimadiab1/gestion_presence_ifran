@@ -27,4 +27,9 @@ class Etudiant extends Model
     {
         return $this->hasMany(Presence::class);
     }
+
+    public function parents()
+    {
+        return $this->belongsToMany(ParentModel::class, 'parent_etudiant', 'etudiant_id', 'parent_id');
+    }
 }

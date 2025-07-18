@@ -21,19 +21,15 @@ class Seance extends Model
         'statut_seance_id',
         'seance_reportee_de_id',
     ];
-
- 
     public function matiere()
     {
         return $this->belongsTo(Matiere::class);
     }
 
-  
     public function professeur()
     {
         return $this->belongsTo(Professeur::class);
     }
-
 
     public function classeAnnee()
     {
@@ -45,7 +41,6 @@ class Seance extends Model
         return $this->belongsTo(TypeCours::class);
     }
 
- 
     public function trimestre()
     {
         return $this->belongsTo(Trimestre::class);
@@ -61,7 +56,6 @@ class Seance extends Model
         return $this->belongsTo(Seance::class, 'seance_reportee_de_id');
     }
 
-  
     public function presences()
     {
         return $this->hasMany(Presence::class);

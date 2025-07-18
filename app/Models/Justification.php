@@ -16,7 +16,6 @@ class Justification extends Model
         'modifie_par',
     ];
 
-
     public function presence()
     {
         return $this->belongsTo(Presence::class);

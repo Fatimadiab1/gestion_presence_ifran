@@ -11,6 +11,8 @@ class Coordinateur extends Model
 
     protected $fillable = ['user_id'];
 
+    // 🔗 Relations
+
     public function user()
     {
         return $this->belongsTo(User::class);

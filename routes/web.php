@@ -15,16 +15,12 @@ Route::get('/', function () {
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
-
-// Groupe de routes accessibles seulement si l'utilisateur est connecté
 Route::middleware('auth')->group(function () {
 
-    // Routes du profil
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 
-    // Dashboards par rôle
     Route::get('/admin/dashboard', function () {
         return view('admin.dashboard');
     })->middleware(IsAdmin::class)->name('admin.dashboard');

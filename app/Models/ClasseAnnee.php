@@ -9,8 +9,11 @@ class ClasseAnnee extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['classe_id', 'annee_academique_id', 'coordinateur_id'];
-
+    protected $fillable = [
+        'classe_id',
+        'annee_academique_id',
+        'coordinateur_id',
+    ];
 
     public function classe()
     {
@@ -22,7 +25,6 @@ class ClasseAnnee extends Model
         return $this->belongsTo(AnneeAcademique::class);
     }
 
-  
     public function coordinateur()
     {
         return $this->belongsTo(Coordinateur::class);
@@ -32,7 +34,6 @@ class ClasseAnnee extends Model
     {
         return $this->hasMany(Inscription::class);
     }
-
 
     public function emploiTemps()
     {

@@ -8,14 +8,14 @@ return new class extends Migration
 {
     public function up(): void
     {
-Schema::create('matieres', function (Blueprint $table) {
-    $table->id();
-    $table->string('nom'); 
-    $table->integer('volume_horaire_prevu');
-    $table->timestamps();
-});
-
+        Schema::create('matieres', function (Blueprint $table) {
+            $table->id();
+            $table->string('nom'); 
+            $table->integer('volume_horaire_prevu');
+            $table->timestamps();
+        });
     }
+
     public function down(): void
     {
         Schema::dropIfExists('matieres');
