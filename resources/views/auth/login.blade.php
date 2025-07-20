@@ -2,7 +2,7 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <title>Connexion IFRAN</title>
+    <title>Connexion espace IFRAN</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
     @vite('resources/css/app.css')
@@ -14,7 +14,7 @@
     </script>
 </head>
 
-<body class="min-h-screen">
+<body class="min-h-screen bg-slate-50">
 {{-- Bar du haut --}}
     <div class="flex justify-between items-center px-6 py-6">
 
@@ -23,7 +23,7 @@
     <img src="{{ asset('images/logo-ifran-dark.png') }}" alt="Logo IFRAN sombre" class="h-44 hidden dark:block">
 </div>
         <div class="flex items-center gap-4">
-            <a href="https://ifran.ci/" class="text-sm hover:underline flex items-center gap-2">
+           <a href="https://ifran.ci/" class="text-sm flex items-center gap-2 hover:text-[#FF0047] transition-colors duration-400">
                 <i class="fas fa-globe text-lg"></i>
                 <span>Site web</span>
             </a>
@@ -43,7 +43,7 @@
         </div>
 
         {{-- Formulaire --}}
-        <div class="w-full max-w-md bg-white dark:bg-[#4D5066] p-6 rounded-lg shadow-lg">
+       <div class="w-full max-w-md bg-white dark:bg-[#4D5066] p-6 rounded-lg shadow-2xl dark:shadow-lg">
             <h2 class="text-2xl font-bold mb-4">Connexion</h2>
 
             <x-auth-session-status class="mb-4" :status="session('status')" />

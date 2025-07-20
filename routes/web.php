@@ -7,6 +7,17 @@ use App\Http\Middleware\IsEtudiant;
 use App\Http\Middleware\IsProfesseur;
 use App\Http\Middleware\IsParent;
 use App\Http\Middleware\IsCoordinateur;
+use App\Http\Controllers\RoleController;
+use App\Http\Controllers\UserController;
+
+
+Route::resource('/admin/users', UserController::class)->names('admin.users')->middleware(['auth', IsAdmin::class]);
+
+
+Route::get('admin/roles', [RoleController::class, 'index'])->name('admin.roles.index');
+
+
+
 
 Route::get('/', function () {
     return redirect()->route('login');
